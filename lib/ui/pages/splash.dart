@@ -11,24 +11,31 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   late String userName;
 
-  // _loadSplash() {
-  //   var _duration = Duration(seconds: 3);
-  //   return Timer(_duration, checkAuth);
-  // }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _loadSplash();
+  }
 
-  // void checkAuth() async {
-  //   FirebaseAuth auth = FirebaseAuth.instance;
-  //   if (auth.currentUser != null) {
-  //     CollectionReference userCollection =
-  //         FirebaseFirestore.instance.collection("users");
-  //     Navigator.pushReplacementNamed(context, MainMenu.routeName);
-  //     ActivityServices.showToast(
-  //         "Welcome Back " + auth.currentUser!.email.toString(),
-  //         Colors.blueAccent[700]);
-  //   } else {
-  //     Navigator.pushReplacementNamed(context, Login.routeName);
-  //   }
-  // }
+  _loadSplash() {
+    var _duration = Duration(seconds: 3);
+    return Timer(_duration, checkAuth);
+  }
+
+  void checkAuth() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    if (auth.currentUser != null) {
+      CollectionReference userCollection =
+          FirebaseFirestore.instance.collection("users");
+      Navigator.pushReplacementNamed(context, MainMenu.routeName);
+      ActivityServices.showToast(
+          "Welcome Back " + auth.currentUser!.email.toString(),
+          Colors.blueAccent[700]);
+    } else {
+      Navigator.pushReplacementNamed(context, Login.routeName);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

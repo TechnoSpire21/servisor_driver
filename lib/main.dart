@@ -30,6 +30,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => Splash(),
         Splash.routeName: (context) => Splash(),
         Login.routeName: (context) => Login(),
+        Register.routeName: (context) => Register(),
+        MainMenu.routeName: (context) => MainMenu(),
+        ResetPass.routeName: (context) => ResetPass(),
       },
     );
   }
