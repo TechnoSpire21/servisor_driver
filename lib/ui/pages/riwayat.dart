@@ -60,28 +60,19 @@ class _RiwayatState extends State<Riwayat> {
                                   fit: BoxFit.cover)),
                         ),
                       ),
-                      // Container(
-                      //     margin: EdgeInsets.only(top: 35),
-                      //     child: FutureBuilder(
-                      //       future: _fetchasupan(),
-                      //       builder:
-                      //           (BuildContext context, AsyncSnapshot snapshot) {
-                      //         try {
-                      //           double progress =
-                      //               (double.parse("$asupanSementara") /
-                      //                   double.parse("$asupanMinimum"));
-                      //           if (snapshot.connectionState ==
-                      //               ConnectionState.waiting) {
-                      //             return ActivityServices.loadings();
-                      //           } else {
-                      //             return CustomProgressBar(
-                      //                 size.width / 1.9, progress * 100, 100);
-                      //           }
-                      //         } catch (e) {
-                      //           return ActivityServices.loadings();
-                      //         }
-                      //       },
-                      //     )),
+                      Column(
+                        children: [
+                          Container(
+                            child: Text(
+                              "Pendapatan Hari ini",
+                              style: GoogleFonts.inter(
+                                color: Color(0xFF959595),
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       SizedBox(
                         height: 10,
                       ),
