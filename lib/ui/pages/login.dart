@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
                   Container(
                     margin: EdgeInsets.fromLTRB(10, 20, 5, 0),
                     child: Text(
-                      "Selamat Datang!",
+                      "Selamat Datang Serdivers!",
                       style: GoogleFonts.inter(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
@@ -284,27 +284,6 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    margin: EdgeInsets.only(top: pageSize.width * 0.02),
-                    child: GestureDetector(
-                      onTap: () {
-                        // Navigator.pushReplacement(
-                        //     context,
-                        //     PageTransition(
-                        //         type: PageTransitionType.fade, child: Register()));
-                        Navigator.pushReplacementNamed(
-                            context, Register.routeName);
-                      },
-                      child: Text(
-                        "Belum terdaftar? Registrasi di sini.",
-                        style: TextStyle(
-                          color: Colors.blueAccent[700],
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
-                  )
                 ],
               ),
             ),

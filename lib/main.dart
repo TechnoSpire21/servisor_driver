@@ -33,6 +33,8 @@ class MyApp extends StatelessWidget {
         Register.routeName: (context) => Register(),
         MainMenu.routeName: (context) => MainMenu(),
         ResetPass.routeName: (context) => ResetPass(),
+        EditProfil.routeName: (context) => EditProfil(),
+        Penagaturan.routeName: (context) => Penagaturan(),
       },
     );
   }

@@ -3,7 +3,7 @@ part of 'services.dart';
 class AuthServices {
   static FirebaseAuth auth = FirebaseAuth.instance;
   static CollectionReference userCollection =
-      FirebaseFirestore.instance.collection("users");
+      FirebaseFirestore.instance.collection("drivers");
   // static DocumentReference userDoc;
 
   static Future<String> signUp(Drivers drivers) async {
